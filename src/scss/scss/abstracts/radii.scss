@@ -1,0 +1,10 @@
+$radii: (
+	"rounded": 100vmax,
+	"regular": 0.5rem,
+);
+
+@each $key, $value in $radii {
+	.radius-#{$key} {
+		border-radius: #{$value};
+	}
+}

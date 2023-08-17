@@ -1,0 +1,12 @@
+$font-size: 15px;
+$font-family: 'League Spartan', sans-serif; 
+$font-weights: (
+	"regular": 500,
+	"bold": 700,
+);
+
+@each $key, $value in $font-weights {
+	.fw-#{$key} {
+		font-weight: #{$value};
+	}
+}

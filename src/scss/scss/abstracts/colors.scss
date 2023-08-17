@@ -1,0 +1,18 @@
+$colors: (
+	"primary": hsl(180, 29%, 50%),
+	"page": hsl(180, 52%, 96%),
+	"tab": hsl(180, 31%, 95%),
+	"neutral-500": hsl(180, 8%, 52%),
+	"neutral-200": hsl(180, 14%, 20%),
+	"white": hsl(0, 0%, 99%),
+);
+
+@each $key, $value in $colors {
+	.bg-#{$key} {
+		background-color: #{$value};
+	}
+
+	.text-#{$key} {
+		color: #{$value};
+	}
+}

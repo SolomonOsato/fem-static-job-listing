@@ -1,0 +1,128 @@
+@use './scss/scss/abstracts/index.scss' as *;
+
+.flow {
+	& > * + * {
+		margin-block-start: 4rem;
+
+		@include breakPoint(37.5em) {
+			margin-block-start: 2rem;
+		}
+	}
+
+	&[data-flow = "sm"] > * + * {
+		margin-block-start: 1rem;
+
+		@include breakPoint(37.5em) {
+			margin-block-start: 0.5rem;
+		}
+	}
+}
+
+h1,
+h2 {
+	font-size: 15px; 
+}
+
+.container {
+	max-inline-size: calc(1024 / 16 * 1rem);
+	margin-inline: auto;
+	padding: 2rem;
+	position: relative;
+}
+
+.priority {
+	$priority-border: map-get($map: $colors, $key: "primary");
+	border-inline-start: 8px solid $priority-border;
+}
+
+.badge {
+	border-radius: 100vmax;
+	padding: 0.25rem 0.5rem;
+}
+
+button {
+	border: 0;
+	padding: 0.5rem;
+
+	@include breakPoint(37.5em) {
+		padding: 1rem;
+	}
+}
+
+hr {
+	@include breakPoint(37.5em) {
+		display: none;
+	}
+}
+
+body {
+	font-family: $font-family;
+	font-weight: map-get($map: $font-weights, $key: "regular");
+	font-weight: 500;
+	font-size: calc(15 / 16 * 1rem);
+	line-height: 1.5;
+	background-color: map-get($map: $colors, $key: "page");
+}
+
+.cluster {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: flex-start;
+	align-items: center;
+	@include breakPoint(37.5em) {
+		justify-content: flex-end;
+	}
+}
+
+.flex {
+	display: flex;
+	gap: 0.75rem;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.flex-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.job {
+	padding: 1.5rem;
+	background-color: hsl(0 0% 99%);
+
+	@include breakPoint(37.5em) {
+		display: grid;
+		grid-template-columns: auto auto 1fr;
+		align-items: center;
+		gap: 0.85rem;
+	}
+}
+
+.company-logo {
+	aspect-ratio: 1;
+	border-radius: 50%;
+	inline-size: 3.5rem;
+	position: absolute;
+	transform: translateY( -100%);
+
+	@include breakPoint(37.5em) {
+		inline-size: 5rem;
+		position: static;
+		transform: none;
+	}
+}
+
+.sortBy {
+	padding: 2rem;
+	position: relative;
+	inline-size: 100%;
+	transform: translateY(calc(-75% - 2rem));
+
+	@include breakPoint(37.5em) {
+		transform: translateY(-125%);
+	}
+}
+

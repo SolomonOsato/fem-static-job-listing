@@ -1,0 +1,12 @@
+@function rem($px) {
+	@return ($px / 16) * 1rem
+}
+
+@function em($px) {
+	@return ($px / 16) * 1em
+}
+
+@function URL($file-name) {
+	$baseURL: "/src/assets/images/";
+	@return $baseURL + $file_name
+}

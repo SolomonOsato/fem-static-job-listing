@@ -1,0 +1,14 @@
+.header {
+	background-image: url("/src/assets/images/bg-header-mobile.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	aspect-ratio: 2;
+}
+
+@media screen and (min-width: 37.5em) {
+	.header {
+		background-image: url("/src/assets/images/bg-header-desktop.svg");
+		background-size: contain;
+		aspect-ratio: 5;
+	}
+}

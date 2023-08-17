@@ -1,0 +1,19 @@
+@mixin motionOk {
+	@media screen and (prefers-reduced-motion: no-preference) {
+		@content
+	}
+}
+
+@mixin breakPoint($bp) {
+	@media screen and (min-width: $bp) {
+		@content
+	}
+}
+
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+	position: absolute;
+	inset-block-start: $top;
+	inset-inline-end: $right;
+	inset-block-end: $bottom;
+	inset-inline-start: $left;
+}
