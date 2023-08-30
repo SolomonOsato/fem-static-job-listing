@@ -8,4 +8,9 @@ export default defineConfig(({ command }) => {
 	base: '/vite-deploy-demo/',
   }
 
+  if (command !== 'serve') {
+    config.base = 'https://solomonosato.github.io/fem-static-job-listing/'
+  }
+
+  return config
 })
