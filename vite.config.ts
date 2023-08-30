@@ -8,5 +8,4 @@ export default defineConfig(({ command }) => {
 	base: '/vite-deploy-demo/',
   }
 
-  return config
 })
