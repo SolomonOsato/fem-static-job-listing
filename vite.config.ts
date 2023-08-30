@@ -5,11 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ command }) => {
   const config = {
     plugins: [react()],
-    base: '/',
-  }
-
-  if (command !== 'serve') {
-    config.base = 'https://solomonosato.github.io/fem-static-job-listing/'
+	base: '/vite-deploy-demo/',
   }
 
   return config
