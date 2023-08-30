@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ command }) => {
   const config = {
     plugins: [react()],
-	base: '/fem-static-job-listing/',
+	base: 'https://solomonosato.github.io/fem-static-job-listing/',
   }
 
   if (command !== 'serve') {
