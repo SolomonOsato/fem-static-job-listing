@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Jobs } from './assets/data'
 import './App.scss'
 import Job from './components/Job';
 import JobListings from './components/JobListings';
@@ -33,17 +34,6 @@ interface Request {
 }
 
 export default function App() {
-	let Jobs: Job[] = []
-	useEffect(() => {
-		fetchJobs()
-	})
-
-	async function fetchJobs() {
-		const response = await fetch("./assets/data")
-		const data = await response.json()
-		Jobs = await data
-	}
-
 	const emptyChipStore: Chip[] = []
 	const emptyJobs: Job[] = Jobs
 	const [ jobs, setJobs ] = useState(emptyJobs)
