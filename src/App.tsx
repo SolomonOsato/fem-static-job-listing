@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Jobs } from './assets/data'
 import './App.scss'
 import Job from './components/Job';
 import JobListings from './components/JobListings';
