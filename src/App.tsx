@@ -33,7 +33,7 @@ interface Request {
 }
 
 export default function App() {
-	let Jobs: Job[]
+	let Jobs: Job[] = []
 	useEffect(() => {
 		fetchJobs()
 	})
