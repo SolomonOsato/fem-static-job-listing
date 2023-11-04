@@ -1,45 +1,41 @@
-
-import Job from './Job';
+import Job from "./Job";
+import { AnimatePresence } from "framer-motion";
 
 interface Job {
-	id: number;
-	new: boolean;
-	featured: boolean;
-	logo: string;
-	role: string;
-	level: string;
-	tools: string[];
-	languages: string[];
-	company: string;
-	location: string;
-	postedAt: string;
-	position: string;
-	contract: string;
+  id: number;
+  new: boolean;
+  featured: boolean;
+  logo: string;
+  role: string;
+  level: string;
+  tools: string[];
+  languages: string[];
+  company: string;
+  location: string;
+  postedAt: string;
+  position: string;
+  contract: string;
 }
 
 interface Request {
-	method: "PUT" | "DELETE" | "CLEAR";
-	property: string;
-	value: string;
+  method: "PUT" | "DELETE" | "CLEAR";
+  property: string;
+  value: string;
 }
 
 interface Props {
-	jobs: Job[];
-	handleClick: (request: Request) => void;
+  jobs: Job[];
+  handleClick: (request: Request) => void;
 }
 
 export default function JobListings({ jobs, handleClick }: Props) {
-	return (
-		<ul className='jobListings | flow'>
-		{
-			jobs.map(job => (
-				<Job 
-					key={job.id}
-					job={job}
-					handleClick={handleClick}
-				/>
-			))
-		}
-		</ul>
-	)
+  return (
+    <ul className="jobListings | flow">
+      <AnimatePresence>
+        {jobs.map((job) => (
+          <Job key={job.id} job={job} handleClick={handleClick} />
+        ))}
+      </AnimatePresence>
+    </ul>
+  );
 }

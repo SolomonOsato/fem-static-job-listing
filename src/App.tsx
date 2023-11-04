@@ -5,6 +5,7 @@ import Job from "./components/Job";
 import JobListings from "./components/JobListings";
 import FilterSection from "./components/FilterSection";
 import Header from "./components/Header";
+import { motion } from "framer-motion";
 
 interface Job {
   id: number;
