@@ -113,7 +113,6 @@ export default function App() {
     const logoName = logoNameArray[logoNameArray.length - 1];
     const logo = `/${logoName}`;
     job.logo = logo;
-	alert(job.logo)
   });
 
   return (
