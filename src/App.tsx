@@ -111,7 +111,7 @@ export default function App() {
   jobs.forEach((job) => {
     const logoNameArray = job.logo.split("/");
     const logoName = logoNameArray[logoNameArray.length - 1];
-    const logo = `/public/${logoName}`;
+    const logo = `/${logoName}`;
     job.logo = logo;
   });
 
