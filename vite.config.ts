@@ -8,7 +8,7 @@ export default defineConfig(({ command }) => {
 	base: 'https://solomonosato.github.io/fem-static-job-listing/',
   }
 
-  if (command !== 'serve') {
+  if (command === 'build') {
     config.base = 'https://solomonosato.github.io/fem-static-job-listing/'
   }
 
